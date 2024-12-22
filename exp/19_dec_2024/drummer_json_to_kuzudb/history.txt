@@ -1,0 +1,3866 @@
+LOAD FROM 'source.json' RETURN *;
+LOAD FROM 'source.json' RETURN *;
+:exit
+LOAD FROM 'source.json' RETURN *;
+LOAD
+;
+:help
+LOAD FROM './source.json' RETURN *;
+:version
+LOAD FROM ./source.json RETURN *;
+LOAD FROM ./source;
+LOAD FROM './source.json';
+INSTALL json;
+LOAD EXTENSION json;
+LOAD FROM './source.json';
+LOAD FROM 'source.json';
+install json;
+load extension json;
+load from ./source.json
+;
+load from './source.json'
+;
+:exit
+install json;
+load extension json;
+load from './source.json';
+load from './source.json' return *;
+load from './source.json' with headers (head:struct (title: string, dateCretade: datetime) ) return *;
+load with headers (head:struct (title: string, dateCretade: datetime) ) with headers return *;
+load with headers (head:STRUCT (title STRING)) with headers return *;
+load with headers (head STRUCT (title STRING)) with headers return *;
+load with headers (head STRUCT (title STRING)) from './source.json' return *;
+CREATE NODE TABLE OPML (
+    head struct (title string, dateCreated datetime)
+;
+CREATE NODE TABLE OPML (
+    head struct (title string, dateCreated datetime))
+;
+CREATE NODE TABLE Document (
+    id SERIAL PRIMARY KEY,        -- Unique identifier
+    title STRING,                 -- Title of the document
+    dateCreated STRING,           -- Creation date
+    ownerTwitterScreenName STRING,-- Twitter screen name of the owner
+    ownerName STRING,             -- Name of the owner
+    ownerId STRING,               -- ID of the owner (URL)
+    urlUpdateSocket STRING,       -- Update socket URL
+    dateModified STRING,          -- Last modification date
+    expansionState STRING,        -- Expansion state
+    lastCursor STRING             -- Last cursor
+);
+CREATE NODE TABLE Document (
+    id SERIAL PRIMARY KEY,        # Unique identifier
+    title STRING,                 # Title of the document
+    dateCreated STRING,           # Creation date
+    ownerTwitterScreenName STRING,# Twitter screen name of the owner
+    ownerName STRING,             # Name of the owner
+    ownerId STRING,               # ID of the owner (URL)
+    urlUpdateSocket STRING,       # Update socket URL
+    dateModified STRING,          # Last modification date
+    expansionState STRING,        # Expansion state
+    lastCursor STRING             # Last cursor
+);
+load import_json_to_kuzudb.cypher
+;
+load from import_json_to_kuzudb.cypher
+;
+load from 'import_json_to_kuzudb.cypher'
+;
+:help
+CREATE NODE TABLE Document (
+    head struct (
+    id SERIAL PRIMARY KEY,        // Unique identifier
+    title STRING,                 // Title of the document
+    dateCreated STRING,           // Creation date
+    ownerTwitterScreenName STRING,// Twitter screen name of the owner
+    ownerName STRING,             // Name of the owner
+    ownerId STRING,               // ID of the owner (URL)
+    urlUpdateSocket STRING,       // Update socket URL
+    dateModified STRING,          // Last modification date
+    expansionState STRING,        // Expansion state
+    lastCursor STRING             // Last cursor
+    )
+);
+CREATE NODE TABLE Document (
+    id serial, primary key(id),
+    head struct (
+    title STRING,                 // Title of the document
+    dateCreated STRING,           // Creation date
+    ownerTwitterScreenName STRING,// Twitter screen name of the owner
+    ownerName STRING,             // Name of the owner
+    ownerId STRING,               // ID of the owner (URL)
+    urlUpdateSocket STRING,       // Update socket URL
+    dateModified STRING,          // Last modification date
+    expansionState STRING,        // Expansion state
+    lastCursor STRING             // Last cursor
+    )
+);
+CREATE NODE TABLE Document (
+    head struct (
+ 
+CREATE NODE TABLE Document (
+    id serial,
+    head struct (
+    title STRING,                 
+    dateCreated STRING,           
+    ownerTwitterScreenName STRING,
+    ownerName STRING,             
+    ownerId STRING,               
+    urlUpdateSocket STRING,       
+    dateModified STRING,          
+    expansionState STRING,        
+    lastCursor STRING             
+    ),
+    primary key(id)
+);
+CREATE NODE TABLE Subs (
+    id SERIAL,      
+    text STRING,
+    title STRING,
+    created DATETIME
+);
+CREATE NODE TABLE Subs (
+    id SERIAL,      
+    text STRING,
+    title STRING,
+    created DATETIME,
+    PRIMARY KEY (id)
+);
+CREATE NODE TABLE Subs (
+    id SERIAL,      
+    text STRING,
+    title STRING,
+    created TIMESTAMP,
+    PRIMARY KEY (id)
+);
+CREATE NODE TABLE Sentence (
+    id SERIAL,      
+    text STRING,
+    title STRING,
+    created DATETIME,
+    PRIMARY KEY (id)
+);
+CREATE NODE TABLE Sentence (
+    id SERIAL,      
+    text STRING,
+    title STRING,
+    created TIMESTAMP,
+    PRIMARY KEY (id)
+);
+CREATE REL TABLE Body (
+    From Document to Sentence,
+    Order serial,
+)
+
+CREATE REL TABLE Body (
+    From Document to Sentence,
+    Order serial,
+)
+;
+CREATE REL TABLE Body (
+    From Document to Sentence,
+    Order serial,
+),
+
+CREATE REL TABLE Body (
+    From Document to Sentence,
+    Order serial,
+);
+CREATE REL TABLE Body (
+    From Document to Sentence,
+    rank serial
+);
+CREATE REL TABLE subs (
+    From Document to Sentence,
+    rank serial
+);
+drop table subs;
+CREATE REL TABLE subs (
+    From Document to Sentence,
+    rank serial
+);
+install json;
+load json;
+install json;
+load extension json;
+CREATE NODE TABLE Document (
+          id serial,
+          head struct (
+          title STRING,                 
+          dateCreated TIMESTAMP,           
+          ownerTwitterScreenName STRING,
+          ownerName STRING,             
+          ownerId STRING,               
+          urlUpdateSocket STRING,       
+          dateModified STRING,          
+          expansionState STRING,        
+          lastCursor STRING             
+          ),
+          primary key(id)
+      );
+CREATE NODE TABLE Sentence (
+    id SERIAL,      
+    text STRING,
+    title STRING,
+    created TIMESTAMP,
+    PRIMARY KEY (id)
+);
+CREATE REL TABLE Body (
+    From Document to Sentence,
+    rank serial
+)
+
+CREATE REL TABLE subs (
+    From Document to Sentence,
+    rank serial
+)
+;
+CREATE NODE TABLE Document (
+          id serial,
+          head struct (
+          title STRING,                 
+          dateCreated TIMESTAMP,           
+          ownerTwitterScreenName STRING,
+          ownerName STRING,             
+          ownerId STRING,               
+          urlUpdateSocket STRING,       
+          dateModified STRING,          
+          expansionState STRING,        
+          lastCursor STRING             
+          ),
+          primary key(id)
+      );
+CREATE NODE TABLE Sentence (
+    id SERIAL,      
+    text STRING,
+    title STRING,
+    created TIMESTAMP,
+    PRIMARY KEY (id)
+);
+CREATE REL TABLE Body (
+    From Document to Sentence,
+    rank serial
+);
+CREATE REL TABLE subs (
+    From Document to Sentence,
+    rank serial
+);
+load from 'source.json' return *;
+copy Document from 'source.json';
+match (d:Document) return d.*
+;
+load with headers (
+          head struct (
+          title STRING,                 
+          dateCreated TIMESTAMP,           
+          ownerTwitterScreenName STRING,
+          ownerName STRING,             
+          ownerId STRING,               
+          urlUpdateSocket STRING,       
+          dateModified STRING,          
+          expansionState STRING,        
+          lastCursor STRING             
+          )) from 'source.json' return *
+;
+cd ~/r/gh/
+:quit
+;
+match d:Document return *;
+match (d:Document) return *;
+match (d:Document) return d.*;
+load with headers (
+                head struct (
+                title STRING,                 
+                dateCreated TIMESTAMP,           
+                ownerTwitterScreenName STRING,
+                ownerName STRING,             
+                ownerId STRING,               
+                urlUpdateSocket STRING,       
+                dateModified STRING,          
+                expansionState STRING,        
+                lastCursor STRING             
+                ),
+                body struct (
+                    title string,
+                    text string,
+                    created timestamp,
+                    subs struct()[]
+                )[]
+                ) from 'source.json' return *
+      ;
+load with headers (
+                head struct (
+                title STRING,                 
+                dateCreated TIMESTAMP,           
+                ownerTwitterScreenName STRING,
+                ownerName STRING,             
+                ownerId STRING,               
+                urlUpdateSocket STRING,       
+                dateModified STRING,          
+                expansionState STRING,        
+                lastCursor STRING             
+                ),
+                body struct (
+                    title string,
+                    text string,
+                    created timestamp
+                )[]
+                ) from 'source.json' return *
+      ;
+load with headers (
+                head struct (
+                title STRING,                 
+                dateCreated TIMESTAMP,           
+                ownerTwitterScreenName STRING,
+                ownerName STRING,             
+                ownerId STRING,               
+                urlUpdateSocket STRING,       
+                dateModified STRING,          
+                expansionState STRING,        
+                lastCursor STRING             
+                ),
+                body struct (
+                    title string,
+                    text string,
+                    created timestamp
+                )[]
+                ) from 'source.json' 
+with body as b
+unwind b as s
+return distinct s.*;
+load with headers (
+                head struct (
+                title STRING,                 
+                dateCreated TIMESTAMP,           
+                ownerTwitterScreenName STRING,
+                ownerName STRING,             
+                ownerId STRING,               
+                urlUpdateSocket STRING,       
+                dateModified STRING,          
+                expansionState STRING,        
+                lastCursor STRING             
+                ),
+                body struct (
+                    title string,
+                    text string,
+                    created timestamp
+                )[]
+                ) from 'source.json' 
+unwind body as s
+return distinct s.*;
+copy sentence from (
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         title string,
+                         text string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.*
+);
+copy sentence from (
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         title string,
+                         text string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.*
+)
+;
+copy Sentence from (
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         title string,
+                         text string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.title as title, s.text as text, s.created as created
+)
+;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         title string,
+                         text string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.title as title, s.text as text, s.created as created;
+load from './source.json' WITH body as B unwind B as s
+    return distinct s.title as title, s.text as text, s.created as created;
+load from './source.json' unwind body as s
+    return distinct s.title as title, s.text as text, s.created as created;
+copy Sentence FROM (load from './source.json' unwind body as s
+    return distinct s.title as title, s.text as text, s.created as created)
+;
+:q
+match (s:Sentece) return s.*
+;
+match (s:Sentence) return s.*
+;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,                        
+                         title string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.*;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,                        
+                         title string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.*
+;
+load with headers (   
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,                        
+                         title string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.*
+;
+LOAD WITH headers (   
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,                        
+                         title string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.*
+;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         title string,
+                         text string,
+                         created timestamp
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.title as title, s.text as text, s.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.title as title, s.text as text, s.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    with body as b
+    unwind b as s
+    unwind s.subs as s
+    return distinct s.title as title, s.text as text, s.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    with body as b
+    unwind b.subs as s
+    return distinct s.title as title, s.text as text, s.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    with body as b
+    unwind b.subs as s
+    unwind s.subs
+    return distinct s.title as title, s.text as text, s.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    with body as b
+    unwind b.subs as s1
+    unwind s1.subs as s
+    return distinct s.title as title, s.text as text, s.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    with body as b
+    return distinct b.*
+;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.title as title, s.text as text, s.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    return distinct s.title as title, s.text as text, s.created as created, s.subs as subs;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    return distinct s.title as title, s.text as text, s.created as created, s.subs as subs;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    return distinct s1.title as title, s1.text as text, s1.created as created, s1.subs as subs;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp,
+                           subs struct (
+                             text string,
+                             title string,
+                             created timepstamp
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    return distinct s1.title as title, s1.text as text, s1.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp,
+                           subs struct (
+                             text string,
+                             title string,
+                             created timepstamp
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwnisd s1.subs as 2
+    return distinct s2.title as title, s2.text as text, s2.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         title string,
+                         created timestamp,
+                         subs struct (
+                           text string,
+                           title string,
+                           created timestamp,
+                           subs struct (
+                             text string,
+                             title string,
+                             created timestamp
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwnisd s1.subs as 2
+    return distinct s2.title as title, s2.text as text, s2.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct (
+                             text string,
+                             title string,
+                             created timestamp
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwnisd s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created as created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct (
+                             text string,
+                             title string,
+                             created timestamp
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwnisd s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             title string,
+                             created timestamp
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwnisd s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwnisd s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwnisd s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwind s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwind s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwind s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwind s1.subs as s2
+    return distinct s1:s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwind s1.subs as s2
+    return distinct {s1 s2}.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwind s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body.subs.subs as s
+    return distinct s.title as title, s.text as text, s.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as s
+    unwind s.subs as s1
+    unwind s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 head struct (
+                     title STRING,                 
+                     dateCreated TIMESTAMP,           
+                     ownerTwitterScreenName STRING,
+                     ownerName STRING,             
+                     ownerId STRING,               
+                     urlUpdateSocket STRING,       
+                     dateModified STRING,          
+                     expansionState STRING,        
+                     lastCursor STRING             
+                     ),
+                     body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as b
+    unwind b.subs as s1
+    unwind s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load from 'source.json' 
+    unwind body as b
+    unwind b.subs as s1
+    unwind s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as b
+    unwind b.subs as s1
+    unwind s1.subs as s2
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as b
+    unwind b.subs as s1
+    unwind s1.subs as s2
+    s2 as s
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as b
+    unwind b.subs as s1
+    unwind s1.subs as s
+    return distinct s2.title as title, s2.text as text, s2.created;
+load with headers (
+    
+                 body struct (
+                         text string,
+                         created timestamp,
+                         title string,
+                         subs struct(
+                           text string,
+                           created timestamp,
+                           title string,
+                           subs struct(
+                             text string,
+                             created timestamp,
+                             title string
+                           )[]
+                         )[]
+                     )[]
+                     ) from 'source.json' 
+    unwind body as b
+    unwind b.subs as s1
+    unwind s1.subs as s
+    return distinct s.title as title, s.text as text, s.created;
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created;
+load with headers(
+          
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers(
+          
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created;
+load with headers( 
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers( 
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created;
+ load with headers( 
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers( 
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created;
+load with headers( 
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all load with headers( 
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created;
+load with headers(
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all load with headers( 
+                       body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created;
+load with headers(          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created;
+load with headers(body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created;
+load with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created;
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created;
+COPY TO Sentence from (LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created);
+COPY Sentence from (LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created);
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created)
+;
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created;
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct not null s.title as title, s.text as text, s.created;
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          where s.text is not null
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          where s.text is not null
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          where s.text is not null
+          return distinct s.title as title, s.text as text, s.created an created;
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          where s.text is not null
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          where s.text is not null
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          where s.text is not null
+          return distinct s.title as title, s.text as text, s.created as created;
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          where s.text not null
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          where s.text not null
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s where s.text NOT NULL
+          return distinct s.title as title, s.text as text, s.created as created;
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          where s.text NOT NULL
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          where s.text not null
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s where s.text NOT NULL
+          return distinct s.title as title, s.text as text, s.created as created;
+LOAD with headers( body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(body struct(
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created as created;
+match (s:Sentence) return s.*;
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+);
+Copy Sentence FROM(
+ load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+ );
+COPY Sentence FROM(
+ load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+ )
+:q
+
+:
+;
+COPY Sentence FROM(
+ load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+ );
+COPY Sentence FROM(
+(load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+          )
+ );
+ 
+;
+COPY Sentence FROM (
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+          )
+;
+COPY Sentence FROM (
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+          )
+;
+COPY Sentence FROM (
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+          )
+;
+ 
+
+;
+COPY Sentence FROM (
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+          );
+COPY Sentence FROM ( load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s1
+          unwind s1.subs as s
+          return distinct s.title as title, s.text as text, s.created
+Union all
+load with headers (
+          
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as b
+          unwind b.subs as s
+          return distinct s.title as title, s.text as text, s.created
+union all
+load with headers(
+                       body struct (
+                               text string,
+                               created timestamp,
+                               title string,
+                               subs struct(
+                                 text string,
+                                 created timestamp,
+                                 title string,
+                                 subs struct(
+                                   text string,
+                                   created timestamp,
+                                   title string
+                                 )[]
+                               )[]
+                           )[]
+                           ) from 'source.json' 
+          unwind body as s
+          return distinct s.title as title, s.text as text, s.created
+          );
+match (s:sentence) return s.*;
+:q
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       $head_struct
+       ) from 'source.json' return *
+;
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING)
+       ) from 'source.json' return *;
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING)
+       ) from 'source.json' return *;
+COPY Document FROM 'source.json';
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING)
+       ) from 'source.json' return *;
+COPY Document FROM 'source.json';
+Match (d:Document) return d.*;
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING)
+       ) from 'source.json' return *;
+COPY Document FROM 'source.json' RETURN *;
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING)
+       ) from 'source.json' return *;
+COPY Document FROM 'source.json';
+MATCH (d:Document) return d.*;
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+title STRING,
+created TIMESTAMP
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING)
+       ) from 'source.json'  return *;
+COPY Document FROM 'source.json';
+MATCH (d:Document) return d.*;
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+created TIMESTAMP,
+title STRING
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING) ) from 'source.json' return *;
+COPY Document FROM 'source.json';
+MATCH (d:Document) return d.*;
+COPY Sentence FROM(
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING)
+body struct ( text STRING,
+created TIMESTAMP,
+title STRING
+ )[]
+) from 'source.json'
+UNWIND body as s
+return distinct s.* );
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+created TIMESTAMP,
+title STRING
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING) ) from 'source.json' return *;
+COPY Document FROM 'source.json';
+MATCH (d:Document) return d.*;
+COPY Sentence FROM (
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING)
+body struct ( text STRING,
+created TIMESTAMP,
+title STRING
+ )[]
+) from 'source.json'
+UNWIND body as s
+return distinct s.* );
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+created TIMESTAMP,
+title STRING
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING) ) from 'source.json' return *;
+COPY Document FROM 'source.json';
+MATCH (d:Document) return d.*;
+COPY Sentence FROM (
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING),
+body struct ( text STRING,
+created TIMESTAMP,
+title STRING
+ )[]
+) from 'source.json'
+UNWIND body as s
+return distinct s.* );
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+created TIMESTAMP,
+title STRING
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING) ) from 'source.json' return *;
+COPY Document FROM 'source.json';
+MATCH (d:Document) return d.*;
+COPY Sentence FROM (
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING),
+body struct ( text STRING,
+created TIMESTAMP,
+title STRING
+ )[]
+) from 'source.json'
+UNWIND body as s
+return distinct s.* );
+CREATE NODE TABLE Document (dateCreated TIMESTAMP, head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING), primary key (dateCreated));
+CREATE NODE TABLE Sentence ( text STRING,
+created TIMESTAMP,
+title STRING
+ , primary key (created));
+CREATE REL TABLE Body (
+From Document to Sentence,
+position serial,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position serial,
+ONE_MANY
+);
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING) ) from 'source.json' return *;
+COPY Document FROM 'source.json';
+MATCH (d:Document) return d.*;
+COPY Sentence FROM (
+load with headers (
+       dateCreated TIMESTAMP,
+       head struct(
+    title STRING,
+    dateCreated TIMESTAMP,
+    ownerTwitterScreenName STRING,
+    ownerName STRING,
+    ownerId STRING,
+    urlUpdateSocket STRING,
+    dateModified TIMESTAMP,
+    expansionState STRING,
+    lastCursor STRING),
+body struct ( text STRING,
+created TIMESTAMP,
+title STRING
+ )[]
+) from 'source.json'
+UNWIND body as s
+return distinct s.* );

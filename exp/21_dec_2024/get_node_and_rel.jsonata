@@ -1,0 +1,46 @@
+( 
+$_comment:="Example execute: $ cat drummer.json | jfg --querfy-file this one";
+
+$subs := $.body.**.subs#$position.{
+    "from":%.created,
+    "to":created,
+    "position":$position
+};
+
+$body := $.body#$position.{
+    "from": %.head.dateCreated, 
+    "to":$.created,
+    "position":$position
+};
+
+$document_for_work := $.{
+    "created":$.head.dateCreated,
+    "head":$.head,
+    "subs":$.body
+};
+
+$document_for_work.**.subs#$position.{
+    "from":%.created,
+    "to":created,
+    "position":$position
+};
+
+$document := $.{
+    "created":$.head.dateCreated,
+    "head":$.head
+};
+
+
+
+$sentences_in_body:=$.body.{"text":text,"created":created,"title":title};
+$sentences_in_subs:=$.body.**.subs.{"text":text,"created":created,"title":title};
+$sentences := $append($sentences_in_body, $sentences_in_subs);
+{
+"node":{
+    "document":[$document],
+    "sentences":$sentences
+    },
+"rel":{
+    "body":$body,
+    "subs":$subs}};
+)

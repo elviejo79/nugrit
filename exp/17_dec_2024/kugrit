@@ -1,0 +1,131 @@
+#!/usr/bin/env -S nu --log-level warn
+use std assert
+
+#let db_path = $"(pwd)/grit.kuzudb"
+let db_path = '/home/agarciafdz/r/gh/elv79/deleteme_beeminder_10klocs/nugrit/grit.kuzudb'
+# Displays a tree of tasks todo
+def main [] {
+    db_query 'match (c:Calendar)-[:agenda]->(t:task) Return c.day, array_to_json(collect({id:t.id, name:trim(t.name), completed_at: t.completed_at})) as day_plan;'
+    | str replace --all '"[' '['
+    | str replace --all ']"' ']'
+    | str replace --all ']"' ']'
+    | str replace --all '\"' '"'
+    | from json | to yaml
+}
+
+# task to your todo database
+def "main today" [
+    ...task:string # Task you want to add to your todo list
+] {
+    let sentence = ($task | str join ' ')
+   ## TODO: eliminate this sql injection with prepared queries
+   db_query  $"MERGE \(c:Calendar {day : current_date\(\) }\)
+   create \(t:Task {name: '($sentence)' } \)
+   create \(c\)-[:agenda]->\(t\)
+   RETURN c.day, t.id;"
+
+}
+
+# to your TODO list
+
+def "main append_to" [
+    parent_identifier, 
+    ...task:string # Task you want to add to your todo list 
+] {
+    let sentence = ($task_text | str join ' ')
+    match ($parent_identifier | describe) {
+        'string' => $"p:Task {alias:'($parent_identifier)'}"
+        'int' => $"p:Task {id:($parent_identifier)}"
+        _ => error make {msg: 'we only accept ids:int or strings as aliases'
+    } 
+    | db_query $"match \($in\) CREATE \(p\)-[:children]->\(t:Task {name:($sentence)\) return p.*,t.*";
+}
+
+# some tasks are so big that is impossible to complete them in one day
+def "main add_project" [
+    ...task:string # Task you want to add to your todo list
+] {
+let sentence = ($task | str join ' ')
+## TODO: eliminate this sql injection with prepared queries
+db_query  $"create \(t:Task {name: '($sentence)' } \) RETURN t.id;"
+| from json | to yaml
+
+}
+
+
+# a child to a parent node
+def "main alias" [
+    task_id:int, #must already exist in the database.
+    alias:string # must be lowercase and single word
+] {
+
+#assert ($alias == ($alias | str downcase)) $"Aliases are all lowercase, received: ($alias)"
+#assert ($task_id == $task_id) 'I need to test if the task_id is included in the database'
+
+db_query  $"MATCH \(p:Task {id: ($task_id) } \) SET p.alias ='($alias)' RETURN p.id, t.id; " | from json | to yaml
+}
+
+
+def "main add_to_alias" [
+    t_alias:string,
+    ...task:string
+] {
+let sentence = ($task | str join ' ')
+db_query  $"MATCH \(p:Task {alias:'($t_alias)'}\)
+MERGE \(c:Calendar {day : current_date\(\) })
+create \(t:Task {name: '($sentence)' } \)
+create \(c\)-[:agenda]->\(t\)
+create \(p\)-[:children]->\(t)
+create \(t\)-[:parent]->\(p\)
+RETURN c.day, t.id;" #| from json | to yaml
+}
+
+
+def "main tree" [parent_id:int] {
+db_query  $"MATCH \(p:Task {id: ($parent_id)}\)-[c:children* trail 1..4]->\(t:Task\)
+RETURN p.id, t.id, t.completed_at;" | from json --objects | to yaml
+}
+
+def "main stat" [task_id:int]  {
+db_query  $"MATCH \(p:Task \)-[c:children]->\(t:Task {id: ($task_id)}\)
+RETURN p.id, t.id;" | from json --objects | to yaml
+}
+
+
+# mark a task as completed
+def "main check" [id:int] {
+    let complete_query = $"MATCH \(t:Task {id:($id)}\),
+    \(t\)-[:children* trail]->\(c:Task\)
+    SET t.completed_at = current_timestamp\(\)
+    SET c.completed_at=t.completed_at;"
+    db_query $complete_query
+}
+
+# to an empty state, deletes a previous databasek if it exists
+def "main initialize_db" [] {
+    # print $db_path
+    rm --recursive --force $db_path
+    db_query "CREATE NODE TABLE Task (id SERIAL, name STRING, alias STRING, created_at TIMESTAMP DEFAULT current_timestamp(), completed_at TIMESTAMP, PRIMARY KEY(id));
+    CREATE NODE TABLE Calendar (day DATE, PRIMARY KEY(day));
+    CREATE REL TABLE agenda (FROM Calendar TO Task);
+    CREATE REL TABLE children (FROM Task TO Task);
+    CREATE REL TABLE parent (FROM Task TO Task);"
+
+}
+
+
+# this is a patch to overcome the problem that mode jsonlines, doesn't correctly seralize arrays.
+# so the kuzudb json extension can correctly serialize to a file.
+# so I create a temporary file, save it and then delete it.
+# def db_query_hack_json [qry:string ]: nothing -> any {
+#     let temp_file = (mktemp --tmpdir --suffix .json )
+#     let complete_query = (['COPY (', $qry, ') TO',  $'"($temp_file)";'] | str join ' ')
+#     #print $temp_file
+#     #print $complete_query
+#     db_query $complete_query out> /dev/null
+#     cat $temp_file #| tee { rm $temp_file }
+# }
+
+def db_query [qry:string ] {
+    $qry | kuzu $db_path --init install_json.cypher --mode jsonlines --no_stats  --no_progress_bar | tail --lines +7
+}

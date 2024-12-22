@@ -1,0 +1,78 @@
+#!/usr/bin/env nu
+use std assert
+
+# use std/dirs
+
+
+let root = $'(pwd)/db'
+let app_path = $'(pwd)'
+
+def main [] {
+    # even if the subcommands do all the work still needs an empty main
+}
+
+def "main initialize_db" [] {
+    rm --recursive --force $root
+}
+
+def "main task" [...task:string] {
+    let task_sentence = ($task | str join ' ' | str snake-case)
+    let task_path = $'($root)/tasks/($task_sentence)'
+
+    try { mkdir $task_path }
+    let task_creation_day = (stat -c %w $task_path  | format date "%Y-%m-%d")
+    try { mkdir $'($root)/by_date/($task_creation_day)/' }
+    | cd $'($root)/by_date/($task_creation_day)/' 
+    ; ln -s $'../../tasks/($task_sentence)'
+    | cd $app_path
+
+    let task_id = (stat -c %i $task_path)
+    try { mkdir $'($root)/by_id/' }
+    | cd $'($root)/by_id/' 
+    ; ln -s $'../tasks/($task_sentence)' $task_id
+    | cd $app_path
+
+    {'id': $task_id, 'path' : $task_path }
+}
+
+def "main alias" [ task_number:int, alias:string
+] {
+    let task_id = ($task_number | into string )
+    assert ( $'($root)/by_id/($task_id)' | path exists) "The task_id must exist in order to alias it"
+
+    let $relative_task = relative-task-path $'by_id/($task_id)'
+
+    try { mkdir $'($root)/by_alias/' }
+    | cd $'($root)/by_alias/' 
+    ; ln -s $"../($relative_task)" $alias
+    | cd $app_path    
+}
+
+# $ ./todo add by_alias/shoping/ Bread
+# Create the Bread task in ./db/tasks/Bread
+# Create the symlink inside the tasks that is by the alias
+
+def "main add" [ parent:string, ...task:string
+] {
+    let parent_path = $'($root)/($parent)'
+
+    assert ( $parent_path | path exists) $"The parent path must exist, given ($parent_path)"
+
+    let new_task = (main task ...$task)
+    print $new_task
+    let current_dir = (pwd)
+    cd $parent_path
+    | ln -s $new_task.path
+    | cd $current_dir
+}
+
+def "main tree" [] {
+    tree -l $root
+}
+
+def relative-task-path [task_pointer:string] {
+    let $full_task_pointer = $'($root)/($task_pointer)'
+    assert ($full_task_pointer | path exists) "The symlink path, must exist starting at root"
+    let task_real_path = ($full_task_pointer | path expand --strict)
+     $task_real_path | path relative-to $root
+}

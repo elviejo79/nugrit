@@ -1,0 +1,268 @@
+COPY Document FROM './tmp_file/nodes_document.json';
+COPY Sentence FROM './tmp_file/nodes_document.json';
+COPY Body FROM './tmp_file/nodes_document.json';
+COPY Subs FROM './tmp_file/nodes_document.json';
+COPY Document FROM './tmp_file/nodes_document.json';
+COPY Sentence FROM './tmp_file/nodes_document.json';
+COPY Body FROM './tmp_file/nodes_document.json';
+COPY Subs FROM './tmp_file/nodes_document.json';
+CREATE NODE TABLE Document (
+created TIMESTAMP,
+head struct (
+title STRING,
+dateCreated TIMESTAMP,
+ownerTwitterScreenName STRING,
+ownerName STRING,
+ownerId STRING,
+urlUpdateSocket STRING,
+dateModified TIMESTAMP,
+expansionState STRING,
+lastCursor STRING
+),
+primary key (created)
+);
+CREATE NODE TABLE Sentence (
+text STRING,
+created TIMESTAMP,
+title STRING,
+primary key (created)
+);
+CREATE REL TABLE Body (
+From Document to Sentence,
+position INT16,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position INT16,
+ONE_MANY
+);
+COPY Document FROM './tmp_file/nodes_document.json';
+COPY Sentence FROM './tmp_file/nodes_document.json';
+COPY Body FROM './tmp_file/nodes_document.json';
+COPY Subs FROM './tmp_file/nodes_document.json';
+CREATE NODE TABLE Document (
+created TIMESTAMP,
+head struct (
+title STRING,
+dateCreated TIMESTAMP,
+ownerTwitterScreenName STRING,
+ownerName STRING,
+ownerId STRING,
+urlUpdateSocket STRING,
+dateModified TIMESTAMP,
+expansionState STRING,
+lastCursor STRING
+),
+primary key (created)
+);
+CREATE NODE TABLE Sentence (
+text STRING,
+created TIMESTAMP,
+title STRING,
+primary key (created)
+);
+CREATE REL TABLE Body (
+From Document to Sentence,
+position INT16,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position INT16,
+ONE_MANY
+);
+COPY Document FROM '/tmp/tmp.fQqBR7KyOz.json';
+COPY Sentence FROM '/tmp/tmp.j6cEwOeXeL.json';
+COPY Body FROM '/tmp/tmp.f6m1bKXXBu.json';
+COPY Subs FROM '/tmp/tmp.3rJqKsBMmE.json';
+CREATE NODE TABLE Document (
+created TIMESTAMP,
+head struct (
+title STRING,
+dateCreated TIMESTAMP,
+ownerTwitterScreenName STRING,
+ownerName STRING,
+ownerId STRING,
+urlUpdateSocket STRING,
+dateModified TIMESTAMP,
+expansionState STRING,
+lastCursor STRING
+),
+primary key (created)
+);
+CREATE NODE TABLE Sentence (
+text STRING,
+created TIMESTAMP,
+title STRING,
+primary key (created)
+);
+CREATE REL TABLE Body (
+From Document to Sentence,
+position INT16,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position INT16
+);
+COPY Document FROM '/tmp/tmp.u4kRHnGyJT.json';
+COPY Sentence FROM '/tmp/tmp.CErQVYCd61.json';
+COPY Body FROM '/tmp/tmp.Uvp6ccZdFy.json';
+COPY Subs FROM '/tmp/tmp.sQcwoXDlnF.json';
+CREATE NODE TABLE Document (
+created TIMESTAMP,
+head struct (
+title STRING,
+dateCreated TIMESTAMP,
+ownerTwitterScreenName STRING,
+ownerName STRING,
+ownerId STRING,
+urlUpdateSocket STRING,
+dateModified TIMESTAMP,
+expansionState STRING,
+lastCursor STRING
+),
+primary key (created)
+);
+CREATE NODE TABLE Sentence (
+text STRING,
+created TIMESTAMP,
+title STRING,
+primary key (created)
+);
+CREATE REL TABLE Body (
+From Document to Sentence,
+position INT16,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position INT16
+);
+COPY Document FROM '/tmp/tmp.YbI0gU554XDocument.json';
+COPY Sentence FROM '/tmp/tmp.8hJDyYznpsSentence.json';
+COPY Body FROM '/tmp/tmp.0dBoEVhJn9Body.json';
+COPY Subs FROM '/tmp/tmp.AiUoHeygfESubs.json';
+CREATE NODE TABLE Document (
+created TIMESTAMP,
+head struct (
+title STRING,
+dateCreated TIMESTAMP,
+ownerTwitterScreenName STRING,
+ownerName STRING,
+ownerId STRING,
+urlUpdateSocket STRING,
+dateModified TIMESTAMP,
+expansionState STRING,
+lastCursor STRING
+),
+primary key (created)
+);
+CREATE NODE TABLE Sentence (
+text STRING,
+created TIMESTAMP,
+title STRING,
+primary key (created)
+);
+CREATE REL TABLE Body (
+From Document to Sentence,
+position INT16,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position INT16
+);
+COPY Document FROM '/tmp/tmp.AGvQN9pHco.Document.json';
+COPY Sentence FROM '/tmp/tmp.oWcmfIykL9.Sentence.json';
+COPY Body FROM '/tmp/tmp.fmxgObYUyj.Body.json';
+COPY Subs FROM '/tmp/tmp.eICNCepi6R.Subs.json';
+CREATE NODE TABLE Document (
+created TIMESTAMP,
+head struct (
+title STRING,
+dateCreated TIMESTAMP,
+ownerTwitterScreenName STRING,
+ownerName STRING,
+ownerId STRING,
+urlUpdateSocket STRING,
+dateModified TIMESTAMP,
+expansionState STRING,
+lastCursor STRING
+),
+primary key (created)
+);
+CREATE NODE TABLE Sentence (
+text STRING,
+created TIMESTAMP,
+title STRING,
+primary key (created)
+);
+CREATE REL TABLE Body (
+From Document to Sentence,
+position INT16,
+ONE_MANY
+);
+CREATE REL TABLE subs (
+From Sentence to Sentence,
+position INT16
+);
+COPY Document FROM '/tmp/tmp.ZKrwtbzyXM.Document.json';
+COPY Sentence FROM '/tmp/tmp.tCHUohKLkU.Sentence.json';
+COPY Body FROM '/tmp/tmp.eXeZQOY6h6.Body.json';
+COPY Subs FROM '/tmp/tmp.yX8vVtB4Yz.Subs.json';
+CREATE NODE TABLE Document (
+      created TIMESTAMP,
+      head struct (
+      title STRING,
+      dateCreated TIMESTAMP,
+      ownerTwitterScreenName STRING,
+      ownerName STRING,
+      ownerId STRING,
+      urlUpdateSocket STRING,
+      dateModified TIMESTAMP,
+      expansionState STRING,
+      lastCursor STRING
+      ),
+      primary key (created)
+      );
+CREATE NODE TABLE Sentence (
+       text STRING,
+created TIMESTAMP,
+      title STRING,
+      primary key (created)
+      );
+CREATE REL TABLE Body (
+       From Document to Sentence,
+       position INT16,
+       ONE_MANY
+       );
+CREATE REL TABLE subs (
+       From Sentence to Sentence,
+       position INT16
+       );
+COPY Document FROM '/tmp/tmp.cq06cdGQWd.Document.json';
+COPY Sentence FROM '/tmp/tmp.hOwOETe9kj.Sentence.json';
+COPY Body FROM '/tmp/tmp.WO1EWU0TyB.Body.json';
+COPY Subs FROM '/tmp/tmp.S86AuI625S.Subs.json';
+match (d:Document)->[b:Body]->(s:Subs) return *;
+match (d:Document)-[b:Body]->(s:Subs) return *;
+match (d:Document)-[b:Body]->(s:subs) return *;
+match (d:Document)-[b:Body]->(s:Subs) return *;
+match (d:Document)-[b:Body]->(s:Sentnece) return *;
+match (d:Document)-[b:Body]->(s:Sentence) return *;
+match (d:Document)-[b:Body]->(s:Sentence) return d.head.title, s.Text;
+match (d:Document)-[b:Body]->(s:Sentence) return d.head.title, s.Text order by b.position;
+match (d:Document)-[b:Body]->(s:Sentence) return d.head.title as title, s.Text as paragraph order by b.position;
+match (d:Document)-[b:Body]->(s:Sentence) return d.head.title as title, s.Text as lev1 order by b.position;
+match (d:Document)-[b:Body]->(line:Sentence)-[s:Subs*]->(l2:Sentence) return d.head.title as title, line.Text as l1 , l2.Text order by b.position;
+:mode
+:mode box
+match (d:Document)-[b:Body]->(line:Sentence)-[s:Subs*]->(l2:Sentence) return d.head.title as title, line.Text as l1 , l2.Text order by b.position;
+match (d:Document)-[b:Body]->(line:Sentence), (line)-[s:Subs*]->(l2:Sentence) return d.head.title as title, line.Text as l1 , l2.Text order by b.position;
+match (d:Document)-[b:Body]->(line:Sentence), (line)-[s:Subs*1..4]->(l2:Sentence) return d.head.title as title, line.Text as l1 , l2.Text order by b.position;
+copy (match (d:Document)-[b:Body]->(line:Sentence), (line)-[s:Subs*1..4]->(l2:Sentence) return d.head.title as title, line.Text as l1 , l2.Text order by b.position) TO 'output.json';
+copy (match (d:Document)-[b:Body]->(line:Sentence), (line)-[s:Subs*1..4]->(l2:Sentence) return d.head.title as title, line as l1 , l2 order by b.position) TO 'output.json';
+copy (match (d:Document)-[b:Body]->(line:Sentence), (line)-[s:Subs*1..4]->(l2:Sentence) return d.head.title as title, collect(line) as l1 , collect (l2) as subs2 order by b.position) TO 'output.json';
+copy (match (d:Document)-[b:Body]->(line:Sentence), (line)-[s:Subs*1..4]->(l2:Sentence) return d.head.title as title, collect(line) as l1 , collect (l2) as subs2 ) TO 'output.json';

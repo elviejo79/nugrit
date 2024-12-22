@@ -1,0 +1,244 @@
+{
+    "dateCreated": "2022-04-04 16:43:05",
+    "head": {
+        "title": "Notes for CUNY talk",
+        "dateCreated": "2022-04-04 16:43:05",
+        "ownerTwitterScreenName": "davewiner",
+        "ownerName": "Dave Winer",
+        "ownerId": "http://twitter.com/davewiner",
+        "urlUpdateSocket": "ws://drummer.scripting.com:1232/",
+        "dateModified": "2023-02-20 21:22:47",
+        "expansionState": "1,4,9,12,20",
+        "lastCursor": "0"
+    },
+    "body": [
+        {
+            "text": "I went to Lehman for freshman year",
+            "created": "2022-04-04 16:45:52",
+            "title": "Notes for CUNY talk",
+            "subs": [
+                {
+                    "text": "So I have spent some time sitting where you are. ",
+                    "created": "2022-04-04 16:46:02"
+                },
+                {
+                    "text": "A long time ago! :smile:",
+                    "created": "2022-04-04 16:48:03"
+                }
+            ]
+        },
+        {
+            "text": "I come from tech",
+            "created": "2022-04-04 16:45:07",
+            "subs": [
+                {
+                    "text": "i come from tech so that's most of what i'll talk about",
+                    "created": "2022-04-04 16:30:49"
+                },
+                {
+                    "text": "we need journalists who are comfortable with tech",
+                    "created": "2022-04-04 16:31:04",
+                    "title": "Notes for CUNY talk"
+                },
+                {
+                    "text": "and fearless",
+                    "created": "2022-04-04 17:12:57"
+                },
+                {
+                    "text": "and visionaries",
+                    "created": "2022-04-04 17:13:04"
+                }
+            ]
+        },
+        {
+            "text": "Every so often journalism has to digest a technology, and usually they blow it",
+            "created": "2022-04-04 16:31:12",
+            "subs": [
+                {
+                    "text": "confuse simple things as hard things and vice versa.",
+                    "created": "2022-04-04 16:31:26"
+                },
+                {
+                    "text": "the initial scandal for facebook, cambridge analytica, was fairly random",
+                    "created": "2022-04-04 16:31:35",
+                    "subs": [
+                        {
+                            "text": "the facebook features they were using had been around since 2012",
+                            "created": "2022-04-04 16:31:53"
+                        },
+                        {
+                            "text": "everyone had access to them, and they were covered in journalism in glowing terms",
+                            "created": "2022-04-04 16:32:16"
+                        },
+                        {
+                            "text": "every facebook dev had access. i was such a person. users knew about this. if it was news for journos you have to wonder if they were users. ",
+                            "created": "2022-04-04 16:48:43"
+                        },
+                        {
+                            "text": "reporting on this stuff, up till 2016 when they discovered these features could be used for bad stuff, they were hyping it. look what the boy wonder did! (typical uninformed journalism enthusiasm)",
+                            "created": "2022-04-04 16:32:31"
+                        },
+                        {
+                            "text": "having been in this world for 2 decades at that point, we understood quite well where this can go wrong.",
+                            "created": "2022-04-04 16:50:14"
+                        },
+                        {
+                            "text": "they didn't listen. we weren't important. ooops there goes the democracy. ;-)",
+                            "created": "2022-04-04 16:50:38"
+                        },
+                        {
+                            "text": "they didn't look at the potential downside, and it hit them all at once",
+                            "created": "2022-04-04 16:32:44"
+                        },
+                        {
+                            "text": "they made a big stink about something that wasn't even news",
+                            "created": "2022-04-04 16:32:56"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "journalism tends to be black and white on tech",
+            "created": "2022-04-04 16:33:18",
+            "subs": [
+                {
+                    "text": "either it's a gift from god or the spawn of satan",
+                    "created": "2022-04-04 16:33:27"
+                },
+                {
+                    "text": "facebook is always evolving, it's not evil and it is evil",
+                    "created": "2022-04-04 16:33:37"
+                },
+                {
+                    "text": "it's so many things. it's got almost 3 billion users",
+                    "created": "2022-04-04 16:33:52"
+                },
+                {
+                    "text": "not all those people are trying to bring down the world order",
+                    "created": "2022-04-04 16:34:03"
+                },
+                {
+                    "text": "i'm on a lot of groups for things i love, and i wouldn't want to live without facebook",
+                    "created": "2022-04-04 16:34:17"
+                },
+                {
+                    "text": "yet journalism presents a very negative view of it",
+                    "created": "2022-04-04 16:34:34"
+                },
+                {
+                    "text": "it's naive, wrong, costly",
+                    "created": "2022-04-04 16:34:45"
+                }
+            ]
+        },
+        {
+            "text": "the hillary's emails story was bogus",
+            "created": "2022-04-04 16:33:06",
+            "subs": [
+                {
+                    "text": "email servers aren't themselve inherently suspicious",
+                    "created": "2022-04-04 16:35:09"
+                },
+                {
+                    "text": "they were fed republican fud and they went in whole hog",
+                    "created": "2022-04-04 16:35:18"
+                },
+                {
+                    "text": "probably cost us our democracy, certainly made it a lot less likely we keep it",
+                    "created": "2022-04-04 16:35:30"
+                },
+                {
+                    "text": "already a lot of people have died because of this mistake",
+                    "created": "2022-04-04 16:35:47"
+                }
+            ]
+        },
+        {
+            "text": "what we can do about it is counteract the inaccurate news",
+            "created": "2022-04-04 16:35:58",
+            "subs": [
+                {
+                    "text": "hold bootcamps for journalists when a technology becomes wrapped up in a major story",
+                    "created": "2022-04-04 16:36:17"
+                },
+                {
+                    "text": "at least some of the journalists will have the correct picture. ",
+                    "created": "2022-04-04 16:36:32"
+                },
+                {
+                    "text": "go for journalists who are thorough, thoughtful and try to tell an accurate story",
+                    "created": "2022-04-04 16:36:47"
+                },
+                {
+                    "text": "not going to name them but they are out there",
+                    "created": "2022-04-04 16:37:02"
+                }
+            ]
+        },
+        {
+            "text": "we used to have a pretty vibrant journalism around tech",
+            "created": "2022-04-04 16:37:15",
+            "subs": [
+                {
+                    "text": "weeklies and monthlies, for insiders and power users. ",
+                    "created": "2022-04-04 16:37:42"
+                },
+                {
+                    "text": "if you read them you'd be up on the latest developments",
+                    "created": "2022-04-04 16:37:51"
+                },
+                {
+                    "text": "this doesn't seem to exist anymore. it's a shame, because in the 80s when we had such excellent coverage, tech might have had a few million users",
+                    "created": "2022-04-04 16:38:00"
+                },
+                {
+                    "text": "now it's half the population of earth",
+                    "created": "2022-04-04 16:38:39"
+                },
+                {
+                    "text": "so much more important that we stay up on this",
+                    "created": "2022-04-04 16:38:47"
+                },
+                {
+                    "text": "if we're to have that reporters will have to develop deep knowledge of specific segments",
+                    "created": "2022-04-04 16:38:54"
+                },
+                {
+                    "text": "not likely publishers will pay you to do this, you'd have to do it probably because you care about the world and don't want to see the mistakes of the past repeated",
+                    "created": "2022-04-04 16:39:14"
+                }
+            ]
+        },
+        {
+            "text": "and for crying out loud learn how to write a bug report",
+            "created": "2022-04-04 16:40:21",
+            "subs": [
+                {
+                    "text": "help developers create new user experiences",
+                    "created": "2022-04-04 16:40:29"
+                },
+                {
+                    "text": "we need to have confidence that if we screw up our users will help us unscrew it quickly",
+                    "created": "2022-04-04 16:40:39"
+                },
+                {
+                    "text": "we don't have the resources we used to have, just like journalism",
+                    "created": "2022-04-04 16:40:54"
+                },
+                {
+                    "text": "and at the same time we seem to have lost the power users, people who loved the potential of tech so much that they wanted to help make it work.",
+                    "created": "2022-04-04 16:41:06"
+                },
+                {
+                    "text": "if we don't have that kind of help, we can't push forward",
+                    "created": "2022-04-04 16:41:29"
+                },
+                {
+                    "text": "it really is that simple",
+                    "created": "2022-04-04 16:41:39"
+                }
+            ]
+        }
+    ]
+}

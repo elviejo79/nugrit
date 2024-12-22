@@ -1,0 +1,21 @@
+#!/bin/bash/env nu
+
+let root = './db'
+
+def "main initialize_db" [] {
+    rm --recursive --force $root
+}
+
+def "main task" [...task:string] {
+    let task_sentence = ($task | str join ' ' | str snake_case) 
+    let task_path = $'($root)/tasks/($task_sentence)'
+    mkdir $task_path
+    let task_creation_day = (stat -c %w ./Get_groceries/  | format date "%Y-%m-%d")
+    (mkdir $'($root)/by_date/($task_creation_day)/' 
+    || (cd $'($root)/by_date/($task_creation_day)/' 
+    && ln -s $'../../tasks/($task_sentence)'))
+}
+
+def "main tree" [] {
+    tree -l $root
+}

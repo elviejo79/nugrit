@@ -1,0 +1,7 @@
+--- main_example.prysk.md
++++ main_example.prysk.md.err
+@@ -11,4 +11,3 @@
+ And that works with many of his tools.
+ 
+     $ str --help
+-    $ echo 'hello world'

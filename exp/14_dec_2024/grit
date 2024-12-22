@@ -1,0 +1,33 @@
+#!/usr/bin/env -S nu --log-level warn
+use std assert
+
+#let db_path = $"(pwd)/grit.kuzudb"
+let db_path = '/home/agarciafdz/r/gh/elv79/deleteme_beeminder_10klocs/nugrit/grit.kuzudb'
+
+# a clone of grit that works with kuzudb
+def main [] {}
+
+def add [...task] {
+    let sentence = ( $task | str join ' ')
+
+}
+#lets create a new database
+def "main initialize_db" [] {
+    # print $db_path
+    rm --recursive --force $db_path
+    'CREATE NODE TABLE Task (id SERIAL, name STRING, alias STRING, created_at TIMESTAMP DEFAULT current_timestamp(), completed_at TIMESTAMP, PRIMARY KEY(id));
+    CREATE NODE TABLE Calendar (day DATE, PRIMARY KEY(day));
+    CREATE REL TABLE agenda (FROM Calendar TO Task);
+    CREATE REL TABLE children (FROM Task TO Task);
+    CREATE REL TABLE parent (FROM Task TO Task);' 
+    | db_query
+
+}
+
+def db_query [...parameters] string -> json {
+    let scaped_query = $in | str replace --all --regex '([()$])' '\$1'
+    print $scaped_query
+    echo $"($scaped_query)"
+    $"($scaped_query)" | kuzu $db_path --init install_json.cypher --mode jsonlines --no_stats  --no_progress_bar | tail --lines +7 | from json --objects
+}
+
